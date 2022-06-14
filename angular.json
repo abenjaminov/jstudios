@@ -35,7 +35,10 @@
               "src/app/styles/markdown.scss",
               "src/app/styles/scrollbars.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-csharp.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -108,6 +111,5 @@
         }
       }
     }
-  },
-  "defaultProject": "jstudios"
+  }
 }

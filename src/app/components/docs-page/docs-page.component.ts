@@ -1,5 +1,4 @@
-import {Component} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {Component, ElementRef, QueryList, ViewChildren} from "@angular/core";
 import {DocsService} from "../docs-view/services/docs.service";
 
 @Component({
@@ -9,10 +8,16 @@ import {DocsService} from "../docs-view/services/docs.service";
 })
 export class DocsPageComponent {
 
-  constructor(public docsService: DocsService) {
+  @ViewChildren('code') codeElements: QueryList<any>
+
+  constructor(public docsService: DocsService,private element: ElementRef) {
   }
 
   async ngOnInit() {
+
+  }
+
+  onMarkdownReady() {
 
   }
 }

@@ -1,6 +1,33 @@
 @import "mixins";
 
-p {
+ul {
+  display: block;
+  margin-left: -10px;
+}
+
+ul li {
+  display: block;
+  position: relative;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -30px;
+  margin-top: -.9em;
+  background: $thirdColor;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+
+p, li {
   font-size: 20px;
 }
 
@@ -53,6 +80,10 @@ h3 {
     background-color: $mainColor;
     margin-right: 10px;
   }
+}
+
+h4 {
+  font-size: 24px;
 }
 
 code {

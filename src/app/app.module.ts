@@ -9,6 +9,7 @@ import {DocsPageComponent} from "./components/docs-page/docs-page.component";
 import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {DocsViewComponent} from "./components/docs-view/docs-view.component";
 import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
+import {HljsDirective} from "./directives/hljs.directive";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
     AppHeaderComponent,
     DocsPageComponent,
     SidebarComponent,
-    DocsViewComponent
+    DocsViewComponent,
+    HljsDirective
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
       provide:HIGHLIGHT_OPTIONS,
       useValue: {
         coreLibraryLoader: () => import('highlight.js/lib/core'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
         languages: {
           csharp: () => import('highlight.js/lib/languages/csharp')
         }

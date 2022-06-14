@@ -1,5 +1,5 @@
 <div class="docs-page">
-<!--  <div class="markdown" markdown [src]="docsService.selectedDocs"></div>-->
-  <pre><code class="language-cs">enum HelloEnum {{'{}'}}</code></pre>
+  <div class="markdown" markdown [src]="docsService.selectedDocs" (ready)="onMarkdownReady()" highlight-js [lang]="'cs'"></div>
+<!--  <pre><code [highlight]="'enum HelloEnum'" [languages]="['csharp']" class="language-cs"></code></pre>-->
 </div>
 

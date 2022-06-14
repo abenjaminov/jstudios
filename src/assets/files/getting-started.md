@@ -35,22 +35,24 @@ For multiple objective quests, objectives need to be assigned to the quest and f
 
 ### Quest types
 There are several quests types that can be created :
-1. **Single objective quests (SOQ)**
-   This quest type tracks a single objective and has 2 sub types
-  * Single objective context quest (Context quest)
-  * Single objective action quest (Action quest)
-    Each types tracks an objective of its type respectivly, when creating this kind of quest the objectives are seemlesly created by the system and stored in the "Internal assets" folder of the asset pack.
-    The quest is completed once the objective is completed.
-    The SOQ, like the Objective implements an interface named `IObjective` and can be used in same cases in a similar way.
-2. **Multiple objective quests (MOQ)**
-   This quest type track multiple objectives in 2 different manners:
-  * Async - Each objective progresses on its own without depending on other objectives being tracked by the quest.
-  * Sync - The objectives are tracked by their order in the list of objectives
 
-   The quest is completed once all the objectives are completed.
+#### Single objective quests (SOQ)
+This quest type tracks a single objective and has 2 sub types
+* Single objective context quest (Context quest)
+* Single objective action quest (Action quest)
+  Each types tracks an objective of its type respectivly, when creating this kind of quest the objectives are seemlesly created by the system and stored in the "Internal assets" folder of the asset pack.
+  The quest is completed once the objective is completed.
+  The SOQ, like the Objective implements an interface named `IObjective` and can be used in same cases in a similar way.
+    
+#### Multiple objective quests (MOQ)
+This quest type track multiple objectives in 2 different manners:
+* Async - Each objective progresses on its own without depending on other objectives being tracked by the quest.
+* Sync - The objectives are tracked by their order in the list of objectives
+
+ The quest is completed once all the objectives are completed.
 
 ### Quest states (ActiveState)
-```
+```cs
 enum ActiveState  
 {  
     PendingActive,  
@@ -90,6 +92,6 @@ You can make progress on a quest with the `Continue` function
 `public void Continue(IQuestContext context = null, float amountOfProgress = 1)`
 
 There are several ways to use this function
-1. `QuestChannelReference.Ref.Continue()` - Whenever some event occurs in your game that might have an effect on quest of type "Action quest" or MOQ that have objectives of type "Action Objective".
-2. `QuestChannelReference.Ref.Continue(context)` - this is an example of how to use the quest system when some context needs to be counted for example when a collectable has been collected.
-3. `QuestChannelReference.Ref.Continue(context, amount)` - this is used when a context needs to be counted but the addition is more than 1, the amount can also be a negative amount.
+* `QuestChannelReference.Ref.Continue()` - Whenever some event occurs in your game that might have an effect on quest of type "Action quest" or MOQ that have objectives of type "Action Objective".
+* `QuestChannelReference.Ref.Continue(context)` - this is an example of how to use the quest system when some context needs to be counted for example when a collectable has been collected.
+* `QuestChannelReference.Ref.Continue(context, amount)` - this is used when a context needs to be counted but the addition is more than 1, the amount can also be a negative amount.
