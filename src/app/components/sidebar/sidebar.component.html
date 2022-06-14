@@ -1,6 +1,6 @@
 <div class="sidebar">
   <ng-container *ngIf="componentData">
-    <div class="group open" *ngFor="let group of componentData.groups" >
+    <div class="group" *ngFor="let group of componentData.groups" [ngClass]="{'open' : group.isOpen}">
       <div class="group-header">
         <div class="name">
           {{group.name}}
@@ -11,7 +11,7 @@
 
       </div>
       <div class="group-items">
-        <div class="item" *ngFor="let item of group.items" (click)="onItemClicked(item)">
+        <div class="item" *ngFor="let item of group.items" (click)="onItemClicked(item)" [ngClass]="{'selected': item.isSelected}">
           {{item.text}}
         </div>
       </div>

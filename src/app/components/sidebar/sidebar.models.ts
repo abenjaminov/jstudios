@@ -1,12 +1,15 @@
 export class SidebarGroup {
   name: string;
-
   items: Array<SidebarItem> = [];
+
+  isOpen?: boolean;
 }
 
 export class SidebarItem {
   text: string;
   context: any;
+
+  isSelected?: boolean;
 }
 
 export class SidebarComponentData {

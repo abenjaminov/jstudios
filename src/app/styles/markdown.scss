@@ -1,6 +1,54 @@
 @import "mixins";
 
 pre {
+  background-color: $secondaryColor;
+  color: $black;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: flex;
+}
+
+h1 {
   background-color: $mainColor;
   color: $secondaryColor;
+  padding: 25px 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 45px;
+}
+
+h2 {
+  border-bottom: 1px solid $mainColor;
+  border-left: 3px solid $mainColor;
+  padding-left: 20px;
+  margin-top: 60px;
+  font-size: 36px;
+
+  &:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  display: flex;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 1em;
+    background-color: $mainColor;
+    margin-right: 10px;
+  }
+}
+
+code {
+  color: $mainColor;
+  font-weight: bold;
+
+  pre & {
+    color: $black;
+  }
 }

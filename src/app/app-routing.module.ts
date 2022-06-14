@@ -5,6 +5,9 @@ import {DocsViewComponent} from "./components/docs-view/docs-view.component";
 const routes: Routes = [{
   path:'docs',
   component: DocsViewComponent
+},{
+  path:'**',
+  redirectTo: 'docs'
 }];
 
 @NgModule({

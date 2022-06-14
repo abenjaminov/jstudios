@@ -44,6 +44,16 @@
         font-size: 18px;
         padding-left: 10px;
 
+        &.selected {
+          background-color: $secondaryColor;
+          color:$mainColor;
+          border-bottom-right-radius: 10px;
+
+          &:not(&:first-child) {
+            border-top-right-radius: 10px;
+          }
+        }
+
         &:hover {
           color: $mainColor;
           cursor: pointer;

@@ -6,20 +6,20 @@ Its easy to set up and use following the steps listed below.
 ## Entities in the system
 JStudios Quest system works with core entities to construct all quests, mostly in the form of a scriptable object.
 
-## Quest context
+### Quest context
 A quest context is the game entity that the quest relates to, for example
 * An apple item (collectable) is the context for a single objective quest that needs the player to collect some amount of apples
 * An NPC can be a context for a quest that needs the player to talk to it
 
 A context can be some scriptable object that implements `IQuestContext` and is assigned to the objective/quest but it can also be linked through a component on a game object called `QuestContextBehaviour`.
 
-## Objective
+### Objective
 An objective is the final data form that defines some task, for example
 * collect 5 apples
 * reach level 4
 * talk to NPC
 
-## Objective types
+### Objective types
 There are two types of objectives
 1. Context objective - this objective will need to be contected to a context, either a
    scriptable object one or through a behaviour and will count the amount of times this context has been triggered.
@@ -28,11 +28,11 @@ There are two types of objectives
    complete, the condition is custom writen by implementing an interface on a scriptable object.
    For example - An objective that completes when the player reaches level 4.
 
-## Quest
+### Quest
 A quest is essentially a collection of objectives, it can be a single objective quest or a multiple objective quest.
 For multiple objective quests, objectives need to be assigned to the quest and for the single objective quest, the objective is automatically created and assigned to the quest.
 
-## Quest types
+### Quest types
 There are several quests types that can be created :
 1. **Single objective quests (SOQ)**
    This quest type tracks a single objective and has 2 sub types
@@ -48,7 +48,7 @@ There are several quests types that can be created :
 
    The quest is completed once all the objectives are completed.
 
-## Quest states (ActiveState)
+### Quest states (ActiveState)
 ```
 enum ActiveState  
 {  
@@ -69,19 +69,19 @@ enum ActiveState
 If the "Complete Instantly" checkbox is unchecked then the quest will enter "Pending Completed" before it will enter completed and the user will need to trigger an event to make the state transition.
 
 
-## Quest Requirements
+### Quest Requirements
 A quest can be given requirements to indicate if it is available for activation, for instance, some quests depend of something that has occured in the game for it to be available like the user reaching a level, or and area cleared etc.
 Requirements are created by implementing an interface (`IRequirement`) on a scriptable object and assigning to the quest.
 
-## Quest Completion Actions
+### Quest Completion Actions
 A quest can be given custom actions to perform once it is completed, this is done by implementing an interface (`ICompletionAction`) on a scriptable object and assigning to the quest.
 This can be used for example to grant EXP at the end of a quest.
 
-## Quest System Core
+### Quest System Core
 This scriptable object manages the quest systems behind the scenes, it mainains overall health of the system and makes sure everything is in place.
 Through here you will have access to the QuestList, ObjectiveList, QuestSystemChannel and the JSettings although it is not a best practice to use these references (Use the reference scriptable object for each of the above).
 
-## Quest channel
+### Quest channel
 The quest channel is the main source of communication with the quest system, when progress needs to be tracked or any quest/objective related events need to be listened to then the quest channel is the place to do it.
 To access the quest channel you will to reference the quest channel reference: in the project window right click and then go to *Create/JStudios/Quest System/References/Channel*
 
