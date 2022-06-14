@@ -1,7 +1,28 @@
+@import "src/app/styles/mixins";
+
 .app-header {
-  position: absolute;
-  width: 100%;
-  lefT: 0;
-  top: 0;
-  background-color: red;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  @include shadowBottom();
+
+  .links {
+    display: flex;
+    margin-right: 20px;
+
+    .link {
+      padding: 3px;
+      width: 65px;
+      border-bottom: 1px solid black;
+      margin-left: 3px;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: #F5F5F5;
+        cursor: pointer;
+      }
+    }
+  }
 }

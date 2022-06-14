@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/styles/markdown.scss",
+              "src/app/styles/scrollbars.scss"
             ],
             "scripts": []
           },

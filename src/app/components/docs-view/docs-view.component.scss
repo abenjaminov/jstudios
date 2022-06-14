@@ -1,0 +1,16 @@
+.docs {
+  padding-top: 10px;
+  height: calc(100% - 10px);
+  display: flex;
+  .sidebar {
+    flex-basis: 200px;
+    height: 100%;
+  }
+
+  .docs-page {
+    flex: 1;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+}

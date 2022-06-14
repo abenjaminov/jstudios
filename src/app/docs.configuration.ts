@@ -2,6 +2,9 @@ export const docsConfiguration = [{
   name: 'Quest System',
   sections: [{
     name: 'Getting started',
-    mdFilePath: 'getting-started.md'
+    mdFilePath: '../../../assets/files/getting-started.md'
+  }, {
+    name: 'Quest',
+    mdFilePath: ''
   }]
 }]

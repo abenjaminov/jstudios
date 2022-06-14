@@ -1,8 +1,10 @@
 import {Injectable} from "@angular/core";
 
 
-@Injectable()
-export class DocsViewComponentService {
+@Injectable({
+  providedIn: 'root'
+})
+export class DocsService {
   selectedDocs: string
 
   setDocs(mdFilePath: string) {

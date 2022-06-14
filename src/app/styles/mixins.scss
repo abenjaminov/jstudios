@@ -1,0 +1,20 @@
+$black: #5f697d;
+
+$mainColor: #0A89FF;
+$secondaryColor: #E5F4F2;
+$thirdColor: #44908B;
+
+@mixin shadowBottom {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+@mixin shadowLeft {
+  box-shadow: 3px 0px 6px rgb(0 0 0 / 16%);
+}
+
+@mixin shadow-hover {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 32%);
+}
+
+
+

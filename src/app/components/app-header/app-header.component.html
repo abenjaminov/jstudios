@@ -1,6 +1,7 @@
 <div class="app-header">
-  JStudios
   <div class="links">
-
+    <div *ngFor="let link of links" class="link">
+      {{link.text}}
+    </div>
   </div>
 </div>
