@@ -3,6 +3,7 @@
 Welcome to the JStudios Quest system asset pack, using this package you can set up quests and objectives for your project.
 Its easy to set up and use following the steps listed below.
 
+
 ## Entities in the system
 JStudios Quest system works with core entities to construct all quests, mostly in the form of a scriptable object.
 
@@ -11,7 +12,7 @@ A quest context is the game entity that the quest relates to, for example
 * An apple item (collectable) is the context for a single objective quest that needs the player to collect some amount of apples
 * An NPC can be a context for a quest that needs the player to talk to it
 
-A context can be some scriptable object that implements `IQuestContext` and is assigned to the objective/quest but it can also be linked through a component on a game object called `QuestContextBehaviour`.
+A context can be some scriptable object that implements <span class='link'>`IQuestContext`</span> and is assigned to the objective/quest but it can also be linked through a component on a game object called `QuestContextBehaviour`.
 
 ### Objective
 An objective is the final data form that defines some task, for example
