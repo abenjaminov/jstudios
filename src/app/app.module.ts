@@ -8,6 +8,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {DocsPageComponent} from "./components/docs-page/docs-page.component";
 import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {DocsViewComponent} from "./components/docs-view/docs-view.component";
+import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
 
 @NgModule({
   declarations: [
@@ -21,9 +22,20 @@ import {DocsViewComponent} from "./components/docs-view/docs-view.component";
     BrowserModule,
     AppRoutingModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    HttpClientModule
+    HttpClientModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          csharp: () => import('highlight.js/lib/languages/csharp')
+        }
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
