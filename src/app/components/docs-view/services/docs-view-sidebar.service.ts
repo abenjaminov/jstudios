@@ -12,14 +12,14 @@ export class DocsViewSidebarService extends SidebarComponentService{
   async getComponentData(): Promise<SidebarComponentData> {
     let result = new SidebarComponentData();
 
-    for (let doc of docsConfiguration) {
+    for (let group of docsConfiguration[0].groups) {
       const newGroup = new SidebarGroup();
-      newGroup.name = doc.name;
+      newGroup.name = group.name;
 
-      for(let section of doc.sections) {
+      for(let item of group.items) {
         const newItem = new SidebarItem();
-        newItem.text = section.name;
-        newItem.context = section.mdFilePath;
+        newItem.text = item.name;
+        newItem.context = item.mdFilePath;
 
         newGroup.items.push(newItem);
       }
