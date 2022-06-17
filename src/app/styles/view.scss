@@ -1,3 +1,7 @@
+@import "mixins";
+
 .view {
-  padding: 20px;
+  padding: 85px 20px;
+  background-color: $secondaryColor;
+  height: calc(100% - 170px);
 }

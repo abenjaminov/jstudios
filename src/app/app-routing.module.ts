@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {DocsViewComponent} from "./components/docs-view/docs-view.component";
-import {DocsSelectionViewComponent} from "./components/docs-selection-view/docs-selection-view.component";
+import {StudioSelectionViewComponent} from "./components/studio-selection-view/studio-selection-view.component";
 
 const routes: Routes = [{
-  path:'docs',
-  component: DocsSelectionViewComponent
+  path:'studio',
+  component: StudioSelectionViewComponent
 },{
   path: 'docs/:docsKey',
   component: DocsViewComponent
@@ -17,7 +17,7 @@ const routes: Routes = [{
   component: DocsViewComponent
 },{
   path:'**',
-  redirectTo: 'docs'
+  redirectTo: 'studio'
 }];
 
 @NgModule({

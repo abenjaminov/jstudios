@@ -1,22 +1,23 @@
 @import "src/app/styles/mixins";
 
-.docs-selection-view {
+.studio-selection-view {
   display: flex;
   flex-direction: column;
 
-  .docs-container {
+  .studio-items-container {
     display: flex;
     flex-direction: row;
     flex: 1;
 
-    .docs {
+    .studio-item {
       width: 250px;
-      height: 250px;
+      height: 150px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       font-size: 30px;
       position: relative;
+      margin-right: 30px;
 
       .title {
         flex-basis: 80px;
@@ -24,6 +25,8 @@
         justify-content: center;
         align-items: center;
         color: $mainColor;
+        text-align: center;
+        padding-top: 25px;
       }
 
       .content {

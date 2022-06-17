@@ -10,7 +10,7 @@ import {DocsViewComponent} from "./components/docs-view/docs-view.component";
 import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
 import {HljsDirective} from "./directives/hljs.directive";
 import {FloatingMenuComponent} from "./floating-menu/floating-menu.component";
-import {DocsSelectionViewComponent} from "./components/docs-selection-view/docs-selection-view.component";
+import {StudioSelectionViewComponent} from "./components/studio-selection-view/studio-selection-view.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {DocsSelectionViewComponent} from "./components/docs-selection-view/docs-
     DocsViewComponent,
     HljsDirective,
     FloatingMenuComponent,
-    DocsSelectionViewComponent
+    StudioSelectionViewComponent
   ],
   imports: [
     BrowserModule,

@@ -9,9 +9,9 @@
   .top-left-triangle {
     width: 0;
     height: 0;
-    border-top: 50px solid $mainColor;
-    border-bottom: 50px solid transparent;
-    border-right: 50px solid transparent;
+    border-top: 60px solid $mainColor;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid transparent;
     position:absolute;
     top: 0;
     left:0;
@@ -19,7 +19,7 @@
     span {
       color: $secondaryColor;
       position: absolute;
-      top: -45px;
+      top: -50px;
       width: 20px;
       left: 5px;
       text-align: center;

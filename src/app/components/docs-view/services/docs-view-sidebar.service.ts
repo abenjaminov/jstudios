@@ -1,9 +1,9 @@
 import {SidebarComponentData, SidebarComponentService, SidebarGroup, SidebarItem} from "../../sidebar/sidebar.models";
 import {Injectable} from "@angular/core";
-import {docsConfiguration} from "../../../docs.configuration";
 import {DocsService} from "./docs.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NavigationService} from "../../../services/navigation.service";
+import {studioItemsConfiguration, StudioItemType} from "../../../models";
 
 @Injectable()
 export class DocsViewSidebarService extends SidebarComponentService {
@@ -27,14 +27,14 @@ export class DocsViewSidebarService extends SidebarComponentService {
     const groupKey = this.activatedRoute.snapshot.paramMap.get("groupKey")?.toString();
     const itemKey = this.activatedRoute.snapshot.paramMap.get("itemKey")?.toString();
 
-    const docs = docsConfiguration.find(x => x.key === this.docsService.currentDocsKey);
-    const selectedGroup = docs.groups.find(x => x.key == groupKey)
+    const docs = studioItemsConfiguration.find(x => x.type == StudioItemType.docs && x.key === this.docsService.currentDocsKey);
+    const selectedGroup = docs.context.find(x => x.key == groupKey)
     let selectedItem = undefined;
 
     if(selectedGroup)
       selectedItem = selectedGroup.items.find(x => x.key == itemKey);
 
-    for (let group of docs.groups) {
+    for (let group of docs.context) {
       const newGroup = new SidebarGroup();
       newGroup.name = group.name;
       newGroup.key = group.key;
