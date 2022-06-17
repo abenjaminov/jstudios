@@ -1,5 +1,5 @@
-<div class="docs-page">
-  <div class="markdown" markdown [src]="docsService.selectedDocs" (ready)="onMarkdownReady()" highlight-js [lang]="'cs'"></div>
-<!--  <pre><code [highlight]="'enum HelloEnum'" [languages]="['csharp']" class="language-cs"></code></pre>-->
+<div class="docs-page" #docsPage>
+  <div class="scroll-target"></div>
+  <div class="markdown" markdown [src]="docsService.selectedDocsPath" (ready)="onMarkdownReady()" highlight-js [lang]="'cs'" (click)="onClicked($event)"></div>
 </div>
 

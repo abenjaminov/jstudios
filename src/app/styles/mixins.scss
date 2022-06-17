@@ -4,8 +4,11 @@ $mainColor: #0A89FF;
 $secondaryColor: #E5F4F2;
 $thirdColor: #44908B;
 
+$mainShadowColor: #0A89FF29;
+$mainShadowHoverColor: #0A89FF52;
+
 @mixin shadowBottom {
-  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  box-shadow: 0 3px 6px $mainShadowColor;
 }
 
 @mixin shadowLeft {
@@ -13,7 +16,7 @@ $thirdColor: #44908B;
 }
 
 @mixin shadow-hover {
-  box-shadow: 0 3px 6px rgb(0 0 0 / 32%);
+  box-shadow: 0 3px 6px $mainShadowHoverColor;
 }
 
 

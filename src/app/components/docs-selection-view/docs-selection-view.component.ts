@@ -1,10 +1,6 @@
 import {Component} from "@angular/core";
 import {docsConfiguration} from "../../docs.configuration";
-
-class DocsInfo {
-  name: string;
-  key:string;
-}
+import {NavigationService} from "../../services/navigation.service";
 
 @Component({
   selector: 'docs-selector-view',
@@ -14,7 +10,7 @@ class DocsInfo {
 export class DocsSelectionViewComponent {
   docInfos: Array<DocsInfo>
 
-  constructor() {
+  constructor(private navigationService: NavigationService) {
   }
 
   ngOnInit() {
@@ -22,8 +18,13 @@ export class DocsSelectionViewComponent {
     for(let docs of docsConfiguration) {
       this.docInfos.push({
         name: docs.name,
-        key: docs.key
+        key: docs.key,
+        icon: docs.icon
       })
     }
+  }
+
+  onDocsClicked(docs: DocsInfo) {
+    this.navigationService.navigateToRoute(`docs/${docs.key}`);
   }
 }

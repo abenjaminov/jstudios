@@ -10,12 +10,25 @@
     flex: 1;
 
     .docs {
-      width: 125px;
-      height: 125px;
+      width: 250px;
+      height: 250px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      font-size: 30px;
+      position: relative;
+
+      .title {
+        flex-basis: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $mainColor;
+      }
+
+      .content {
+        flex: 1;
+      }
 
       &:hover {
         cursor: pointer;

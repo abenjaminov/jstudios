@@ -1,7 +1,17 @@
 <div class="docs-selection-view view">
   <div class="docs-container">
-    <div class="docs box" *ngFor="let doc of docInfos">
-      {{doc.name}}
+    <div class="docs box" *ngFor="let doc of docInfos" (click)="onDocsClicked(doc)">
+      <div class="top-left-triangle">
+        <span>
+          <i class="{{doc.icon}}"></i>
+        </span>
+      </div>
+      <div class="title">
+        {{doc.name}}
+      </div>
+      <div class="content">
+
+      </div>
     </div>
   </div>
 </div>

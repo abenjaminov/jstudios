@@ -7,7 +7,13 @@ const routes: Routes = [{
   path:'docs',
   component: DocsSelectionViewComponent
 },{
-  path: 'docs/:key',
+  path: 'docs/:docsKey',
+  component: DocsViewComponent
+},{
+  path: 'docs/:docsKey/:groupKey',
+  component: DocsViewComponent
+},{
+  path: 'docs/:docsKey/:groupKey/:itemKey',
   component: DocsViewComponent
 },{
   path:'**',

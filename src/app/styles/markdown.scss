@@ -1,5 +1,44 @@
 @import "mixins";
 
+.scroll-target {
+  height: 1px;
+}
+
+table {
+
+  .public-properties-table & {
+    tr {
+      td:nth-child(4) { // Shown in inspector
+        width: 175px;
+      }
+    }
+  }
+
+  border: 1px solid $black;
+  border-collapse: collapse;
+
+  tr {
+    height: 30px;
+    &:nth-child(even) {
+      background-color: $secondaryColor;
+    }
+
+    th {
+      background-color: $mainColor;
+      color: $secondaryColor;
+    }
+
+    td, th {
+      padding: 10px;
+
+      &:not(&:last-of-type) {
+        border-right: 1px solid $black;
+
+      }
+    }
+  }
+}
+
 ul {
   display: block;
   margin-left: -10px;
@@ -27,7 +66,7 @@ ul li:before {
 }
 
 
-p, li {
+p, li, table {
   font-size: 20px;
 }
 
@@ -84,6 +123,17 @@ h3 {
 
 h4 {
   font-size: 24px;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  border-bottom: 1px solid $black;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
 }
 
 code {
