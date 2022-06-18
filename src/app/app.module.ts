@@ -11,6 +11,7 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
 import {HljsDirective} from "./directives/hljs.directive";
 import {FloatingMenuComponent} from "./floating-menu/floating-menu.component";
 import {StudioSelectionViewComponent} from "./components/studio-selection-view/studio-selection-view.component";
+import {ViewComponent} from "./components/view/view.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {StudioSelectionViewComponent} from "./components/studio-selection-view/s
     DocsViewComponent,
     HljsDirective,
     FloatingMenuComponent,
-    StudioSelectionViewComponent
+    StudioSelectionViewComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

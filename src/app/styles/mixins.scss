@@ -7,6 +7,11 @@ $fourthColor: #F4F9FF;
 
 $mainShadowColor: #0A89FF29;
 $mainShadowHoverColor: #0A89FF52;
+$fourthColorAlphaFullScreen: #F4F9FF80;
+
+@mixin shadowBottomLarge {
+  box-shadow: 0 3px 6px $mainColor;
+}
 
 @mixin shadowBottom {
   box-shadow: 0 3px 6px $mainShadowColor;

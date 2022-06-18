@@ -1,31 +1,83 @@
 @import "src/app/styles/mixins";
 
-.floating-icon {
-  width: 65px;
-  height: 65px;
-  font-size: 24px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @include shadowBottom();
-  background-color: $secondaryColor;
-  color: $mainColor;
-  z-index: 50;
-  position: absolute;
-  right: 35px;
-  top: 10px;
+.menu-container {
+  &.active {
+    .menu-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 50;
+      background-color: $fourthColorAlphaFullScreen;
+    }
 
-  &:hover {
-    @include shadow-hover();
-    cursor: pointer;
+    .menu {
+      visibility: visible;
+    }
+
+    .floating-icon {
+      background-color: $mainColor;
+    }
   }
 
-  &:active {
-    box-shadow: none;
+  .menu {
+    position: absolute;
+    width: 360px;
+    height: 550px;
+    background-color: $secondaryColor;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 30px;
+
+    .menu-item {
+      flex-basis: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
-  img {
-    width: 50px;
+  .floating-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include shadowBottom();
+    background-color: $secondaryColor;
+    z-index: 50;
+    position: absolute;
+    right: 35px;
+    top: 10px;
+
+    &:hover {
+      @include shadow-hover();
+      cursor: pointer;
+    }
+
+    img {
+      width: 50px;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
   }
 }
+
+

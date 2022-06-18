@@ -2,13 +2,13 @@
 
 @import "~prismjs/themes/prism-okaidia.min.css";
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
-@import "src/app/styles/view";
 @import "src/app/styles/box";
 //@import "~prismjs/themes/prism-tomorrow.min.css";
 //@import "~prismjs/themes/prism.min.css";
 
 body {
   font-family: "Oceanwide QLt";
+  color: $black;
 }
 
 @font-face {
@@ -16,3 +16,21 @@ body {
   src: url('assets/fonts/California Type Foundry - Oceanwide-Semibold.otf') format('opentype');
 }
 
+.themed-content {
+  width: 100%;
+  margin: 0;
+  span::first-letter {
+    color: $mainColor;
+  }
+
+  &:hover {
+    background-color: $secondaryColor;
+    color: $mainColor;
+    span::first-letter {
+      color: $black;
+    }
+
+    border-left: 8px solid $mainColor;
+    border-right: 8px solid $mainColor;
+  }
+}

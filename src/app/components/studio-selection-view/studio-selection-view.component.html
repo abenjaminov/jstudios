@@ -1,14 +1,16 @@
-<div class="studio-selection-view view">
-  <div class="studio-items-container">
-    <div class="studio-item box" *ngFor="let studioItem of studioItemsConfiguration" (click)="onStudioItemClicked(studioItem)">
-      <div class="top-left-triangle">
-        <span>
-          <i class="{{studioItem.icon}}"></i>
-        </span>
-      </div>
-      <div class="title">
-        {{studioItem.name}}
+<view>
+  <div viewContent class="studio-selection-view">
+    <div class="studio-items-container">
+      <div class="studio-item box" *ngFor="let studioItem of studioItemsConfiguration" (click)="onStudioItemClicked(studioItem)">
+        <div class="top-left-triangle">
+          <span>
+            <i class="{{studioItem.icon}}"></i>
+          </span>
+        </div>
+        <div class="title">
+          {{studioItem.name}}
+        </div>
       </div>
     </div>
   </div>
-</div>
+</view>
