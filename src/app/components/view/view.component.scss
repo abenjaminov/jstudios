@@ -12,6 +12,9 @@
     align-items: center;
     font-size: 52px;
     padding-left: 30px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 
     span {
       color: $mainColor;

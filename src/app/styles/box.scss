@@ -6,6 +6,16 @@
   border-radius: 6px;
   @include shadowBottom();
 
+  &:hover {
+    .top-left-triangle {
+      border-top-color: $secondaryColor;
+
+      span {
+        color: $mainColor;
+      }
+    }
+  }
+
   .top-left-triangle {
     width: 0;
     height: 0;
@@ -27,49 +37,7 @@
       font-family: arial;
       display: block;
     }
-  }
 
-  &-number-display {
 
-    &:hover {
-      @include shadow-hover();
-      cursor: pointer;
-    }
-
-    &:active {
-      @include shadowBottom();
-    }
-
-    margin-right: 20px;
-    height: 140px;
-    width: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-
-    .title {
-      font-weight: bold;
-      font-size: 18px;
-      height: 30px;
-      text-align: center;
-    }
-
-    .content {
-      flex: 1;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .number-display {
-        font-size: 26px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 }

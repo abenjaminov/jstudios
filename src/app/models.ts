@@ -6,6 +6,7 @@ export enum StudioItemType {
 export class StudioItemInfo {
   name: string;
   key:string;
+  description: string;
   icon: string;
   type: StudioItemType;
   context: any;
@@ -16,6 +17,7 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
   key: 'implemetingascalablequestsystem',
   icon: 'fa-brands fa-medium',
   type: StudioItemType.link,
+  description: 'Medium article discussing a possible implementation for a quest system in Unity.',
   context: 'https://medium.com/@asaf.j.benjaminov/implementing-a-scalable-quest-system-7f36ea4cfe22'
 },
   {
@@ -23,6 +25,7 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
     key: 'questsystem',
     icon: 'fa-brands fa-unity',
     type: StudioItemType.docs,
+    description: 'A highly scalable quest system asset pack for Unity.',
     context: [{
       name: 'Introduction',
       key: 'introduction',

@@ -18,15 +18,29 @@
       font-size: 30px;
       position: relative;
       margin-right: 30px;
+      background-color: $white;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
 
-      .title {
+      .title, .description {
         flex-basis: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $mainColor;
+
         text-align: center;
         padding-top: 25px;
+      }
+
+      .title {
+        color: $mainColor;
+      }
+
+      .description {
+        display: none;
+        color: $secondaryColor;
+        font-size: 18px;
       }
 
       .content {
@@ -35,7 +49,16 @@
 
       &:hover {
         cursor: pointer;
-        @include shadow-hover()
+        @include shadow-hover();
+        background-color: $mainColor;
+
+        .description {
+          display: block;
+        }
+
+        .title {
+          display: none;
+        }
       }
     }
   }
