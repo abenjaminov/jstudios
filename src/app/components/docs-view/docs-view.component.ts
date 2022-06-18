@@ -1,6 +1,8 @@
 import {Component} from "@angular/core";
 import {SidebarComponentService} from "../sidebar/sidebar.models";
 import {DocsViewSidebarService} from "./services/docs-view-sidebar.service";
+import {DocsService} from "./services/docs.service";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'docs-view',
@@ -12,4 +14,7 @@ import {DocsViewSidebarService} from "./services/docs-view-sidebar.service";
 })
 export class DocsViewComponent {
 
+  constructor(private docsService: DocsService, private router: Router) {
+
+  }
 }

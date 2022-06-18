@@ -37,9 +37,6 @@ public class QuestContextBehaviour : MonoBehaviour, IQuestContext {}
 #### 1. [ExecuteAlways](https://docs.unity3d.com/ScriptReference/ExecuteAlways.html)
 This is needed for the generation of the unique id to occur in the OnAwake method and for the GameObject to be set as a context to the linked quests / objectives
 
-#### 2. [DisallowMultipleComponent](https://docs.unity3d.com/ScriptReference/DisallowMultipleComponent.html)
-This is needed for the generation of the unique id to occur in the OnAwake method and for the GameObject to be set as a context to the linked quests / objectives
-
 ## Examples
 
 To use this, select your game object in the scene and through the inspector add as a component.<br>

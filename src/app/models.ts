@@ -35,25 +35,47 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
         mdFilePath: '../../../assets/files/quest-system/getting-started.md'
       }]
     },{
-      name: 'Entities',
-      key: 'entities',
+      name: 'Objectives',
+      key: 'objectives',
+      items: [{
+        name: 'IObjective',
+        key: 'iobjective',
+        mdFilePath: '../../../assets/files/quest-system/objectives/iobjective.md',
+      },{
+        name: 'Objective',
+        key: 'objective',
+        mdFilePath: '../../../assets/files/quest-system/objectives/objective.md',
+      }]
+    },{
+      name: 'Quest Context',
+      key: 'questcontexts',
+      items: [{
+        name: 'Quest Context',
+        key: 'questcontext',
+        mdFilePath: '../../../assets/files/quest-system/quest-context/questcontext.md'
+      }, {
+        name: 'Quest Context Behaviour',
+        key: 'questcontextbehaviour',
+        mdFilePath: '../../../assets/files/quest-system/quest-context/questcontextbehaviour.md'
+      }]
+    },{
+      name: 'Quests',
+      key: 'quests',
       items: [
         {
-          name: 'Objective',
-          key: 'objective',
-          mdFilePath: '../../../assets/files/quest-system/entities/objective.md',
-        },{
-          name: 'Quest Context',
-          key: 'questcontext',
-          mdFilePath: '../../../assets/files/quest-system/entities/questcontext.md'
-        }, {
-          name: 'Quest Context Behaviour',
-          key: 'questcontextbehaviour',
-          mdFilePath: '../../../assets/files/quest-system/entities/questcontextbehaviour.md'
-        }, {
           name: 'Quest',
           key: 'quest',
-          mdFilePath: '../../../assets/files/quest-system/entities/quest.md'
+          mdFilePath: '../../../assets/files/quest-system/quests/quest.md'
+        },
+        {
+          name: 'Single objective quest',
+          key: 'soq',
+          mdFilePath: '../../../assets/files/quest-system/quests/quest.md'
+        },
+        {
+          name: 'Multiple objective quest',
+          key: 'moq',
+          mdFilePath: '../../../assets/files/quest-system/quests/quest.md'
         }
       ]
     }]

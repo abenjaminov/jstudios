@@ -1,4 +1,4 @@
-import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from "@angular/core";
+import {Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren} from "@angular/core";
 import {DocsService} from "../docs-view/services/docs.service";
 
 @Component({
@@ -26,8 +26,9 @@ export class DocsPageComponent {
   }
 
   async onClicked($event) {
-
     if($event.target.localName === 'code') {
+      $event.preventDefault();
+      $event.stopPropagation();
       let parent = $event.target.parentElement;
 
       const classes = Object.keys(parent.classList).map(x => parent.classList[x]);
@@ -39,7 +40,7 @@ export class DocsPageComponent {
         const groupKey = parts[4];
         const itemKey = parts[5];
 
-        await this.docsService.goToItem(docsKey, groupKey, itemKey);
+        await this.docsService.goToItem(docsKey, groupKey, itemKey, true);
       }
     }
   }
