@@ -50,4 +50,12 @@ export class SidebarComponent {
     this.service.onItemClicked(group, item);
     this.selectedItem.isSelected = true
   }
+
+  onGroupClicked(group) {
+    this.selectedGroup.isOpen = false;
+    this.selectedGroup = group;
+    this.selectedGroup.isOpen = true;
+    const item = this.selectedGroup.items[0];
+    this.service.onItemClicked(this.selectedGroup, item);
+  }
 }

@@ -32,20 +32,30 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
       items: [{
         name: 'Getting started',
         key: 'gettingstarted',
-        mdFilePath: '../../../assets/files/getting-started.md'
-      }, {
-        name: 'Quest Context',
-        key: 'questcontext',
-        mdFilePath: '../../../assets/files/entities/questcontext.md'
-      }, {
-        name: 'Quest Context Behaviour',
-        key: 'questcontextbehaviour',
-        mdFilePath: '../../../assets/files/entities/questcontextbehaviour.md'
-      }, {
-        name: 'Quest',
-        key: 'quest',
-        mdFilePath: '../../../assets/files/entities/quest.md'
+        mdFilePath: '../../../assets/files/quest-system/getting-started.md'
       }]
+    },{
+      name: 'Entities',
+      key: 'entities',
+      items: [
+        {
+          name: 'Objective',
+          key: 'objective',
+          mdFilePath: '../../../assets/files/quest-system/entities/objective.md',
+        },{
+          name: 'Quest Context',
+          key: 'questcontext',
+          mdFilePath: '../../../assets/files/quest-system/entities/questcontext.md'
+        }, {
+          name: 'Quest Context Behaviour',
+          key: 'questcontextbehaviour',
+          mdFilePath: '../../../assets/files/quest-system/entities/questcontextbehaviour.md'
+        }, {
+          name: 'Quest',
+          key: 'quest',
+          mdFilePath: '../../../assets/files/quest-system/entities/quest.md'
+        }
+      ]
     }]
   }]
 

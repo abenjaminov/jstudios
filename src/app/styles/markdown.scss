@@ -70,7 +70,7 @@ p, li, table {
   font-size: 20px;
 }
 
-span.link {
+span[class^='jstudios-docs-link'] {
   &:hover {
     border-bottom: 3px solid $mainColor;
     cursor: pointer;

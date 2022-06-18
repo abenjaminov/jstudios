@@ -7,9 +7,23 @@
   .group {
     border-top-right-radius: 8px;
     &.open {
+      border-bottom: 1px solid $mainColor;
       .group-header {
         background-color: $mainColor;
         color:white;
+      }
+    }
+    &:not(&.open) {
+      .group-header{
+        &:hover {
+          color: $mainColor;
+          cursor: pointer;
+          border-left: 8px solid $mainColor;
+        }
+      }
+
+      &:hover {
+        color: $mainColor;
       }
     }
 
@@ -29,11 +43,21 @@
         width: 40px;
         height: 100%;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .group-items {
       display: flex;
       flex-direction: column;
+      height: 0;
+      overflow: hidden;
+
+      &.open {
+        height: auto;
+      }
 
       .item {
         height: 30px;
