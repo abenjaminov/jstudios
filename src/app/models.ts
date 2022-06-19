@@ -1,3 +1,9 @@
+export enum DeviceType {
+  mobile,
+  desktopChrome,
+  desktopOther
+}
+
 export enum StudioItemType {
   link,
   docs
