@@ -16,23 +16,28 @@ export class StudioItemInfo {
   icon: string;
   type: StudioItemType;
   context: any;
+  isActive?: boolean;
 }
 
-export const studioItemsConfiguration: Array<StudioItemInfo> = [{
-  name: "Implementing a scalable quest system",
-  key: 'implemetingascalablequestsystem',
-  icon: 'fa-brands fa-medium',
-  type: StudioItemType.link,
-  description: 'Medium article discussing a possible implementation for a quest system in Unity.',
-  context: 'https://medium.com/@asaf.j.benjaminov/implementing-a-scalable-quest-system-7f36ea4cfe22'
+export const studioItemsConfiguration: Array<StudioItemInfo> = [
+  {
+    name: "Implementing a scalable quest system",
+    key: 'implemetingascalablequestsystem',
+    icon: 'fa-brands fa-medium',
+    isActive: true,
+    type: StudioItemType.link,
+    description: 'Medium article discussing a possible implementation for a quest system in Unity.',
+    context: 'https://medium.com/@asaf.j.benjaminov/implementing-a-scalable-quest-system-7f36ea4cfe22'
 },
   {
     name: 'Quest System asset pack',
     key: 'questsystem',
     icon: 'fa-brands fa-unity',
     type: StudioItemType.docs,
+    isActive: true,
     description: 'A highly scalable quest system asset pack for Unity.',
-    context: [{
+    context: [
+      {
       name: 'Introduction',
       key: 'introduction',
       items: [{
@@ -51,6 +56,14 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
         name: 'Objective',
         key: 'objective',
         mdFilePath: '../../../assets/files/quest-system/objectives/objective.md',
+      },{
+        name: 'Context Objective',
+        key: 'contextobjective',
+        mdFilePath: '../../../assets/files/quest-system/objectives/context-objective.md',
+      },{
+        name: 'Action Objective',
+        key: 'actionobjective',
+        mdFilePath: '../../../assets/files/quest-system/objectives/action-objective.md',
       }]
     },{
       name: 'Quest Context',
@@ -76,14 +89,41 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [{
         {
           name: 'Single objective quest',
           key: 'soq',
-          mdFilePath: '../../../assets/files/quest-system/quests/quest.md'
+          mdFilePath: '../../../assets/files/quest-system/quests/soq.md'
         },
         {
           name: 'Multiple objective quest',
-          key: 'moq',
-          mdFilePath: '../../../assets/files/quest-system/quests/quest.md'
+          key: 'moq.md',
+          mdFilePath: '../../../assets/files/quest-system/quests/moq.md'
         }
       ]
+    },{
+      name: 'Models',
+      key: 'models',
+      items: [{
+        name: 'Active State',
+        key: 'activestate',
+        mdFilePath: '../../../assets/files/quest-system/models/active-state.md'
+
+      }, {
+        name: 'Completion Action',
+        key: 'completionaction',
+        mdFilePath: '../../../assets/files/quest-system/models/completion-action.md'
+      }, {
+        name: 'Requirement',
+        key: 'requirement',
+        mdFilePath: '../../../assets/files/quest-system/models/requirement.md'
+      }]
     }]
-  }]
+  },
+  {
+    name: 'JStudios utilities',
+    key: 'jstudiosutilities',
+    description: 'Utilities for working and coding in Unity',
+    icon: 'fa-brands fa-unity',
+    type: StudioItemType.docs,
+    isActive: false,
+    context: []
+  }
+]
 

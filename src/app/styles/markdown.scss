@@ -70,7 +70,7 @@ p, li, table {
   font-size: 20px;
 }
 
-span[class^='jstudios-docs-link'] {
+span[class^='jdl'] {
   &:hover {
     border-bottom: 3px solid $mainColor;
     cursor: pointer;
@@ -93,6 +93,10 @@ h1 {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   font-size: 45px;
+
+  span {
+    font-size: 18px;
+  }
 }
 
 h2 {
@@ -137,10 +141,14 @@ h4 {
 }
 
 code {
-  color: $mainColor;
+  color: #a19951;
   font-weight: bold;
 
   pre & {
     color: $black;
+  }
+
+  span & {
+    color: $mainColor;
   }
 }

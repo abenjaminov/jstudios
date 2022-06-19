@@ -9,7 +9,7 @@ import {StudioItemInfo, studioItemsConfiguration, StudioItemType} from '../../mo
   styleUrls: ['studio-selection-view.component.scss']
 })
 export class StudioSelectionViewComponent {
-  docInfos: Array<StudioItemInfo>
+  displayItems: Array<StudioItemInfo>
 
   studioItemsConfiguration = studioItemsConfiguration;
 
@@ -17,6 +17,7 @@ export class StudioSelectionViewComponent {
   }
 
   ngOnInit() {
+    this.displayItems = this.studioItemsConfiguration.filter(x => x.isActive);
   }
 
   onStudioItemClicked(docs: StudioItemInfo) {

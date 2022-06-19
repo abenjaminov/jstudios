@@ -1,23 +1,23 @@
-# QuestContextBehaviour
+# QuestContextBehaviour <span>MonoBehaviour</span>
 ## Description
 This is a MonoBehaviour (Component) assigned to a game object so that it can become a context for a quest or and objective.
 <br> There can only
 
-## Public Properties
+## Properties
 <div class="public-properties-table">
 
 | Name | Type | Description | Shown in inspector
 |:--- |:---|:--- | :--- |
 | ContextName | `string` | This property exists for the user in order to help with debugging and organizing, it has no actual use for the QuestSystem and can be ignored. | Yes |
-| Objectives | `IEnumerable<IObjective>` | List of the objectives / quests that this GameObject will be used as a context for. | Yes |
+| Objectives | <span class='jdl-questsystem-objectives-iobjective'>`IEnumerable<IObjective>`</span> | List of the objectives / quests that this GameObject will be used as a context for. | Yes |
 
 </div>
 
-## Public Methods
+## Methods
 
-| Name | Returns | Description
-|:--- |:---|:--- |
-| SetAsContextFor | void | The GameObject can be added as a context for any quest / objective dynamically at runtime using this function. |
+| Name | Returns | Params | Description
+|:--- |:---|:--- |:--- |
+| SetAsContextFor | void | <span class='jdl-questsystem-objectives-iobjective'>`IObjective`</span> | The GameObject can be added as a context for any quest / objective dynamically at runtime using this function. |
 
 ## Context Menu
 | Menu Path | Description |
@@ -41,7 +41,7 @@ This is needed for the generation of the unique id to occur in the OnAwake metho
 
 To use this, select your game object in the scene and through the inspector add as a component.<br>
 Once it is assigned it can be used like any MonoBehaviour.
-Don't forget to link `SingleObjectiveQuests` or <span class='jstudios-docs-link-questsystem-introduction-objective'>`Objectives`</span> to this MonoBehaviour through the `Objectives` field in the inspector.
+Don't forget to link `SingleObjectiveQuests` or <span class='jdl-questsystem-introduction-objective'>`Objectives`</span> to this MonoBehaviour through the `Objectives` field in the inspector.
 
 In our example project, for some of our quests we would like to track the distance covered by the snake,<br>
 to do this we need the `SnakeMovement` MonoBehaviour to notify the quest system once it has moved, and the context for these quests is the snake itself.

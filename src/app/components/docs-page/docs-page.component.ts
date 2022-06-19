@@ -32,13 +32,13 @@ export class DocsPageComponent {
       let parent = $event.target.parentElement;
 
       const classes = Object.keys(parent.classList).map(x => parent.classList[x]);
-      const linkClass = classes.find(x => x.startsWith('jstudios-docs-link'));
+      const linkClass = classes.find(x => x.startsWith('jdl'));
 
       if(linkClass) {
         const parts = linkClass.split('-');
-        const docsKey = parts[3];
-        const groupKey = parts[4];
-        const itemKey = parts[5];
+        const docsKey = parts[1];
+        const groupKey = parts[2];
+        const itemKey = parts[3];
 
         await this.docsService.goToItem(docsKey, groupKey, itemKey, true);
       }
