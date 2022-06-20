@@ -9,7 +9,7 @@
       height: 100%;
       width: 100%;
       z-index: 50;
-      background-color: $fourthColorAlphaFullScreen;
+      background-color: $lightGrayWithAlpha;
     }
 
     .menu {
@@ -17,7 +17,7 @@
     }
 
     .floating-icon {
-      background-color: $mainColor;
+      background-color: $secondaryColor;
     }
   }
 
@@ -25,7 +25,7 @@
     position: absolute;
     width: 360px;
     height: 550px;
-    background-color: $secondaryColor;
+    background-color: $lightGray;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -60,7 +60,7 @@
     justify-content: space-around;
     align-items: center;
     @include shadowBottom();
-    background-color: $white;
+    background-color: $mainColor;
     z-index: 50;
     position: absolute;
     right: 35px;

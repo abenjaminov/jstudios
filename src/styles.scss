@@ -8,7 +8,7 @@
 
 body {
   font-family: "Oceanwide QLt";
-  color: $black;
+  color: $darkGray;
 }
 
 @font-face {
@@ -21,19 +21,27 @@ body {
   margin: 0;
   border-radius: 8px;
 
+  span {
+    color: $darkGray;
+    line-height: 1.1em;
+  }
 
   span::first-letter {
     color: $mainColor;
+    font-size: 1.15em;
   }
 
-  &:hover {
-    background-color: $secondaryColor;
-    color: $mainColor;
+  &-hover {
+    &:hover {
+      span {
+        color: $mainColor;
+      }
 
-    span::first-letter {
-      color: $black;
+      span::first-letter {
+        color: $darkGray;
+      }
+      border-left: 8px solid $mainColor;
+      border-right: 8px solid $mainColor;
     }
-    border-left: 8px solid $mainColor;
-    border-right: 8px solid $mainColor;
   }
 }

@@ -1,7 +1,7 @@
 # Objective <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
 
 ## Description
-This is the building block for any quest, its is here where you can define the logic of the quest.<br>
+This is the building block for any quest, its is here where you can define the logic of the quest. <br>
 To create a Context Objective go to: AssetMenu &rarr; JStudios &rarr; Quest System &rarr; Objectives &rarr; Objective
 
 ## Properties
@@ -23,7 +23,7 @@ To create a Context Objective go to: AssetMenu &rarr; JStudios &rarr; Quest Syst
 | SetContext | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `bool` | See <span class='jdl-questsystem-objectives-iobjective'>`IObjective`</span> for more information |
 | ClearContext | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | See <span class='jdl-questsystem-objectives-iobjective'>`IObjective`</span> for more information |
 | HasContext | `bool` | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | Checks if the current objective responds to the given context |
-| Report | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `float` | If the context is the one that this objective responds to then progress will be made by the amount provided. |
+| Progress | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `float` | If the context is the one that this objective responds to then progress will be made by the amount provided. |
 | SoftReset | None. | None. | Resets progress and state. |
 | ReadyForComplete | None. | None. | Set the state of the objective to  <span class='jdl-questsystem-models-activestate'>`ActiveState.PendingCompleted`</span>|
 | Complete | None. | None. | Sets the PreviousRawCompleted to be equal to the RawCompleted and calls the base class Complete method (See title) |
@@ -32,6 +32,5 @@ To create a Context Objective go to: AssetMenu &rarr; JStudios &rarr; Quest Syst
 TODO
 
 ## Sub Classes
-<span class='jdl-questsystem-objectives-actionobjective'>`ActionObjective`</span>
-
+`ActionObjective` 
 

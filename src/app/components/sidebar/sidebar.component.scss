@@ -7,7 +7,7 @@
   .group {
     border-top-right-radius: 8px;
     &.open {
-      border-bottom: 1px solid $mainColor;
+      border-bottom: 1px solid $darkGray;
       .group-header {
         background-color: $mainColor;
         color:white;
@@ -63,24 +63,34 @@
         height: 30px;
         display: flex;
         align-items: center;
-        color: $black;
+        color: black;
         font-size: 18px;
         padding-left: 10px;
-
-        &.selected {
-          background-color: $secondaryColor;
-          color:$mainColor;
-          border-bottom-right-radius: 10px;
-
-          &:not(&:first-child) {
-            border-top-right-radius: 10px;
-          }
-        }
 
         &:hover {
           color: $mainColor;
           cursor: pointer;
           border-left: 3px solid $mainColor;
+        }
+
+        &.selected {
+          background-color: $darkGray;
+          color:white;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+
+          &:first-child {
+            border-top-right-radius: 0;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: 0;
+          }
+
+          &:hover {
+            color: white;
+            border-left: none;
+          }
         }
       }
     }

@@ -3,6 +3,7 @@
 ## Description
 This interface defines the api for an objective in the system.<br>
 An objective is a piece of data that defines some task that needs to be done.
+To create a Context Objective go to: AssetMenu &rarr; JStudios &rarr; Quest System &rarr; Objectives &rarr; Objective
 
 Two entities in the system implement this interface: <span class='jdl-questsystem-objectives-objective'>`Objective`</span> and <span class='jdl-questsystem-quests-soq'>`SingleObjectiveQuest`</span><br>
 Both of these entities can be used on the <span class='jdl-questsystem-questcontext-questcontextbehaviour'>`QuestContextBehaviour`</span>

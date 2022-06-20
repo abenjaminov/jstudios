@@ -30,21 +30,28 @@ This is needed for the generation of the unique id to occur in the OnAwake metho
 
 ## Examples
 
-To use this, select your game object in the scene and through the inspector add as a component.<br>
-
-<img src='assets/images/addbehaviourascomponent.png' width="736" height="507">
-
-Once it is assigned it can be used like any MonoBehaviour.<br>
-Don't forget to link <span class='jdl-questsystem-quests-quest'>`SingleObjectiveQuests`</span> or <span class='jdl-questsystem-introduction-objective'>`Objectives`</span> to this MonoBehaviour through the `Objectives` field in the inspector.
-
-<img src='assets/images/linkiobjective.png' width="701" height="298">
-
 In our example project, for some of our quests we would like to track the distance covered by the snake,<br>
 to do this we need the `SnakeMovement` MonoBehaviour to notify the quest system once it has moved, and the context for these quests is the snake itself.
 
 To set this up we need to do two things,<br>
 First - Add the `QuestContextBehaviour` component to the snake and link the <span class='jdl-questsystem-quests-quest'>`Quest`</span> / <span class='jdl-questsystem-objectives-objective'>`Objective`</span> to it.<br>
-Second - Write code that updates the QuestSystem once the snake has traveled distance like so :<br> 
+Second - Write code that updates the QuestSystem once the snake has traveled distance like so :<br>
+
+To use this, select your game object in the scene and through the inspector add as a component.<br>
+
+<img src='assets/images/addbehaviourascomponent.png' width="701" height="486">
+
+Once it is assigned it can be used like any MonoBehaviour.<br>
+Don't forget to link <span class='jdl-questsystem-quests-quest'>`SingleObjectiveQuests`</span> or <span class='jdl-questsystem-introduction-objective'>`Objectives`</span> to this MonoBehaviour through the `Objectives` field in the inspector.
+
+<img src='assets/images/linkiobjective.png' width="696" height="463"><br>
+<img src='assets/images/pickquest.png' width="610" height="556">
+
+After this the context will automatically be set on the objective info in the inspector of the asset.
+
+<img src='assets/images/contextset.png' width="354" height="376">
+
+And now we need to notify the QuestSystem that when the snake has traveled some distance.
 
 ```cs
 public class SnakeMovement : MonoBehaviour {
@@ -59,7 +66,7 @@ public class SnakeMovement : MonoBehaviour {
   
   OnMoved(float deltaTraveled) 
   {
-    QuestSystemChannel.Ref.Report(_movementContext, deltaTraveled);
+    QuestSystemChannel.Ref.Progress(_movementContext, deltaTraveled);
   }
 }
 ```

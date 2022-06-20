@@ -1,16 +1,14 @@
-$black: #5f697d;
-$white: #F5F5F5;
+$darkGray: #394d5e;
+$lightGray: #e2effa;
 
 $mainColor: #0A89FF;
-$secondaryColor: #E5F4F2;
-$thirdColor: #44908B;
-$fourthColor: #F4F9FF;
+$secondaryColor: #0aff63;
 
 $alertColor: #D0342C;
 
-$mainShadowColor: #0A89FF66;
-$mainShadowHoverColor: #0A89FF52;
-$fourthColorAlphaFullScreen: #F4F9FF80;
+$mainShadowColor: #394d5e66;
+$mainShadowHoverColor: #394d5e52;
+$lightGrayWithAlpha: #394d5e80;
 
 @mixin shadowBottomLarge {
   box-shadow: 0 3px 6px $mainColor;

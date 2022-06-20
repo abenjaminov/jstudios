@@ -1,7 +1,7 @@
 <div class="menu-container" [ngClass]="{'active' : active}">
   <div class="menu-backdrop" (click)="onBackdropClicked()">
     <div class="menu box" (click)="onMenuClicked($event)">
-      <div class="menu-item themed-content" *ngFor="let menuItem of menuItems" (click)="onMenuItemClicked(menuItem)">
+      <div class="menu-item themed-content themed-content-hover" *ngFor="let menuItem of menuItems" (click)="onMenuItemClicked(menuItem)">
       <span>
         {{menuItem.text}}
       </span>
@@ -9,8 +9,8 @@
     </div>
   </div>
   <div class="floating-icon" (click)="onMenuButtonClicked()">
-    <img src="../../assets/images/bluejay.svg" *ngIf="!active">
-    <img src="../../assets/images/whitebluejay.svg" *ngIf="active">
+    <img src="../../assets/images/bluejay.svg" *ngIf="active">
+    <img src="../../assets/images/whitebluejay.svg" *ngIf="!active">
   </div>
 </div>
 

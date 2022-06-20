@@ -4,6 +4,7 @@
 
 
 <span class='jdl-questsystem-quests-quest'>`Quest`</span>
+<span class='jdl-questsystem-quests-performactionquest'>`PerformActionQuest`</span>
 <span class='jdl-questsystem-quests-quest'>`SingleObjectiveQuest`</span>
 <span class='jdl-questsystem-quests-quest'>`ActionQuest`</span>
 

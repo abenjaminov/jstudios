@@ -56,10 +56,6 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         name: 'Objective',
         key: 'objective',
         mdFilePath: '../../../assets/files/quest-system/objectives/objective.md',
-      },{
-        name: 'Action Objective',
-        key: 'actionobjective',
-        mdFilePath: '../../../assets/files/quest-system/objectives/action-objective.md',
       }]
     },{
       name: 'Quest Context',
@@ -89,8 +85,13 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         },
         {
           name: 'Multiple objective quest',
-          key: 'moq.md',
+          key: 'moq',
           mdFilePath: '../../../assets/files/quest-system/quests/moq.md'
+        },
+        {
+          name: 'Perform action quest',
+          key: 'performactionquest',
+          mdFilePath: '../../../assets/files/quest-system/quests/perform-action-quest.md'
         }
       ]
     },{

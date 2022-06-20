@@ -31,8 +31,8 @@ public class InventoryItem : ScriptableObject, IQuestContext
 }
 ```
 
-### Assignment
-TODO
+#### Assignment
+To assign a `QuestContext` that is a ScriptableObject, link it directly to the Context field on the <span class='jdl-questsystem-quests-quest'>`Quest`</span> / <span class='jdl-questsystem-objectives-objective'>`Objective`</span>
 
 ### As a MonoBehaviour
 If you have a GameObject that you wish to set as a context for a <span class='jdl-questsystem-quests-quest'>`Quest`</span> / <span class='jdl-questsystem-objectives-objective'>`Objective`</span><br>
