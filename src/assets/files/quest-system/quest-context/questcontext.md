@@ -9,7 +9,7 @@ An interface that helps define the API for any object that should be part of a q
 
 | Name | Returns | Description |
 |:---  |:--- |:-------------|
-| `GetUniqueId` | string | Retreives a unique Id that represents this context, its used by the quest system to identify objective targets.|
+| GetUniqueId | string | Retreives a unique Id that represents this context, its used by the quest system to identify objective targets.|
 
 
 ## Examples
@@ -31,10 +31,10 @@ public class InventoryItem : ScriptableObject, IQuestContext
 }
 ```
 
-#### Assignment
+### Assignment
 TODO
 
 ### As a MonoBehaviour
-If you have some GameObject that you with wish to set as a context for a quest<br>
+If you have a GameObject that you wish to set as a context for a <span class='jdl-questsystem-quests-quest'>`Quest`</span> / <span class='jdl-questsystem-objectives-objective'>`Objective`</span><br>
 for example a quest that is completed once the player talk to some NPC in the world
 <br> refer to <span class='jdl-questsystem-introduction-questcontextbehaviour'>`QuestContextBehaviour`</span>

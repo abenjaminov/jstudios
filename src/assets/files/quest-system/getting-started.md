@@ -88,10 +88,10 @@ Through here you will have access to the QuestList, ObjectiveList, QuestSystemCh
 The quest channel is the main source of communication with the quest system, when progress needs to be tracked or any quest/objective related events need to be listened to then the quest channel is the place to do it.
 To access the quest channel you will to reference the quest channel reference: in the project window right click and then go to *Create/JStudios/Quest System/References/Channel*
 
-You can make progress on a quest with the `Continue` function
-`public void Continue(IQuestContext context = null, float amountOfProgress = 1)`
+You can make progress on a quest with the `Report` function
+`public void Report(IQuestContext context = null, float amountOfProgress = 1)`
 
 There are several ways to use this function
-* `QuestChannelReference.Ref.Continue()` - Whenever some event occurs in your game that might have an effect on quest of type "Action quest" or MOQ that have objectives of type "Action Objective".
-* `QuestChannelReference.Ref.Continue(context)` - this is an example of how to use the quest system when some context needs to be counted for example when a collectable has been collected.
-* `QuestChannelReference.Ref.Continue(context, amount)` - this is used when a context needs to be counted but the addition is more than 1, the amount can also be a negative amount.
+* `QuestChannelReference.Ref.Report()` - Whenever some event occurs in your game that might have an effect on quest of type "Action quest" or MOQ that have objectives of type "Action Objective".
+* `QuestChannelReference.Ref.Report(context)` - this is an example of how to use the quest system when some context needs to be counted for example when a collectable has been collected.
+* `QuestChannelReference.Ref.Report(context, amount)` - this is used when a context needs to be counted but the addition is more than 1, the amount can also be a negative amount.

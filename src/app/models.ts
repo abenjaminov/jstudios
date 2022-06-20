@@ -57,10 +57,6 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         key: 'objective',
         mdFilePath: '../../../assets/files/quest-system/objectives/objective.md',
       },{
-        name: 'Context Objective',
-        key: 'contextobjective',
-        mdFilePath: '../../../assets/files/quest-system/objectives/context-objective.md',
-      },{
         name: 'Action Objective',
         key: 'actionobjective',
         mdFilePath: '../../../assets/files/quest-system/objectives/action-objective.md',
@@ -101,6 +97,11 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
       name: 'Models',
       key: 'models',
       items: [{
+        name: 'Quest System Asset',
+        key: 'questsystemasset',
+        mdFilePath: '../../../assets/files/quest-system/models/quest-system-asset.md'
+
+      },{
         name: 'Active State',
         key: 'activestate',
         mdFilePath: '../../../assets/files/quest-system/models/active-state.md'
@@ -113,6 +114,10 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         name: 'Requirement',
         key: 'requirement',
         mdFilePath: '../../../assets/files/quest-system/models/requirement.md'
+      }, {
+        name: 'Dummy Context',
+        key: 'dummycontext',
+        mdFilePath: '../../../assets/files/quest-system/models/dummy-context.md'
       }]
     }]
   },
