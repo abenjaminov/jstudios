@@ -1,4 +1,7 @@
 <div class="sidebar">
+  <div class="sidebar-header themed-content">
+    <span>JStudios</span>
+  </div>
   <ng-container *ngIf="componentData">
     <div class="group" *ngFor="let group of componentData.groups" [ngClass]="{'open' : group.isOpen}">
       <div class="group-header" (click)="onGroupClicked(group)">
