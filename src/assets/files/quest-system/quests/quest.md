@@ -3,7 +3,7 @@
 ## Description
 Base class for all quests, it is composed of multiple or single <span class='jdl-questsystem-objectives-objective'>`Objectives`</span> which determine its state.<br>
 
-For more information see inherited subclass <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
+For more information regarding Properties/Methods/Events see inherited subclass <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
 
 ## Properties
 <div class="public-properties-table">
@@ -27,4 +27,6 @@ For more information see inherited subclass <span class='jdl-questsystem-models-
 | HasContext | `bool` | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | See inherited subclasses for specifics and implementation regarding this method. |
 
 ## Events
-
+| Name | Args | Description
+|:--- | :--- |:--- |
+| OnAvailabilityChangedEvent | `Quest` | Triggers when the availability of the quest changes. |

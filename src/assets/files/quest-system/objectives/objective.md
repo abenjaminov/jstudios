@@ -4,7 +4,7 @@
 This is the building block for any quest, its is here where you can define the logic of the quest. <br>
 To create a Context Objective go to: AssetMenu &rarr; JStudios &rarr; Quest System &rarr; Objectives &rarr; Objective<br>
 
-For more information see inherited subclass <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
+For more information regarding Properties/Methods/Events see inherited subclass <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
 
 ## Properties
 <div class="public-properties-table">

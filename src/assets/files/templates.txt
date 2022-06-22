@@ -15,3 +15,7 @@
 
 Quest / Objective
 <span class='jdl-questsystem-quests-quest'>`Quest`</span> / <span class='jdl-questsystem-objectives-objective'>`Objective`</span>
+
+
+
+For more information regarding Properties/Methods/Events see inherited subclass XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
