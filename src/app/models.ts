@@ -84,14 +84,14 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
           mdFilePath: '../../../assets/files/quest-system/quests/soq.md'
         },
         {
+          name: 'Perform action quest',
+          key: 'actionquest',
+          mdFilePath: '../../../assets/files/quest-system/quests/action-quest.md'
+        },
+        {
           name: 'Multiple objective quest',
           key: 'moq',
           mdFilePath: '../../../assets/files/quest-system/quests/moq.md'
-        },
-        {
-          name: 'Perform action quest',
-          key: 'performactionquest',
-          mdFilePath: '../../../assets/files/quest-system/quests/perform-action-quest.md'
         }
       ]
     },{
