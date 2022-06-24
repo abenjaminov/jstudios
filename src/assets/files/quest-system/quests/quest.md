@@ -23,7 +23,6 @@ For more information regarding Properties/Methods/Events see inherited subclass 
 | IsAvailable | `bool` | None. | Checks if the quest is available for activation. |
 | MeetsRequirements | `bool` | None. | Checks if the quest meets all the activation requirements. |
 | SoftReset | None. | None. | Resets RawCompleted value and the <span class='jdl-questsystem-models-activestate'>`ActiveState`</span> |
-| Progress | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `float` | See inherited subclasses for specifics and implementation regarding this method. |
 | HasContext | `bool` | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | See inherited subclasses for specifics and implementation regarding this method. |
 
 ## Events

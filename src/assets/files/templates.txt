@@ -11,6 +11,7 @@
 
 <span class='jdl-questsystem-models-questsystemasset'>`QuestSystemAsset`</span>
 <span class='jdl-questsystem-models-activestate'>`ActiveState.Active`</span>
+<span class='jdl-questsystem-models-completionaction'>`CompletionAction`</span>
 <span class='jdl-questsystem-models-requirement'>`Requirement`</span>
 <span class='jdl-questsystem-models-dummycontext'>`DummyContext`</span>
 

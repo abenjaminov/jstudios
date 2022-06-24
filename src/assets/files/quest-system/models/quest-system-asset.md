@@ -1,4 +1,4 @@
-# Quest System Asset <span>ScriptableObject</span>
+# Quest System Asset <span>JListAsset</span>
 
 ## Description
 
@@ -18,7 +18,8 @@
 ## Methods
 | Name | Returns | Params | Description
 |:--- |:---|:--- |:--- |
-| Start | None. | None. | Sets the state to <span class='jdl-questsystem-models-activestate'>`ActiveState.Active`</span>, and performs specific activation logic in the subclasses. |
+| Progress | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `float` | If the context is the one that this `QuestSystemAsset` responds to then progress will be made by the amount provided. |
+| Activate | None. | None. | Sets the state to <span class='jdl-questsystem-models-activestate'>`ActiveState.Active`</span>, and performs specific activation logic in the subclasses. |
 | Complete | None. | None. | Set the state to <span class='jdl-questsystem-models-activestate'>`ActiveState.Completed`</span>, invokes all the <span class='jdl-questsystem-models-completionaction'>`CompletionActions`</span> |
 
 ## Events

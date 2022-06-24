@@ -25,7 +25,6 @@ For more information regarding Properties/Methods/Events see inherited subclass 
 | SetContext | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `bool` | See <span class='jdl-questsystem-objectives-iobjective'>`IObjective`</span> for more information |
 | ClearContext | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | See <span class='jdl-questsystem-objectives-iobjective'>`IObjective`</span> for more information |
 | HasContext | `bool` | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span> | Checks if the current objective responds to the given context |
-| Progress | None. | <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>, `float` | If the context is the one that this objective responds to then progress will be made by the amount provided. |
 | SoftReset | None. | None. | Resets progress and state. |
 | ReadyForComplete | None. | None. | Set the state of the objective to  <span class='jdl-questsystem-models-activestate'>`ActiveState.PendingCompleted`</span>|
 | Complete | None. | None. | Sets the PreviousRawCompleted to be equal to the RawCompleted and calls the base class Complete method (See title) |
