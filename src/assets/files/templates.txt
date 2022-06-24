@@ -1,3 +1,6 @@
+<span class='jdl-questsystem-questsystemgeneral-questsystemcore'>`QuestSystemCore`</span>
+<span class='jdl-questsystem-questsystemgeneral-questsystemchannel'>`QuestSystemChannel`</span>
+
 <span class='jdl-questsystem-questcontexts-questcontext'>`IQuestContext`</span>
 <span class='jdl-questsystem-questcontexts-questcontextbehaviour'>`QuestContextBehaviour`</span>
 <span class='jdl-questsystem-objectives-objective'>`Objective`</span>
