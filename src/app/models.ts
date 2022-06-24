@@ -38,12 +38,16 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
     description: 'A highly scalable quest system asset pack for Unity.',
     context: [
       {
-      name: 'Introduction',
-      key: 'introduction',
+      name: 'Quest System',
+      key: 'questsystemgeneral',
       items: [{
         name: 'Getting started',
         key: 'gettingstarted',
         mdFilePath: '../../../assets/files/quest-system/getting-started.md'
+      }, {
+        name: 'Quest System Core',
+        key: 'questsystemcore',
+        mdFilePath: '../../../assets/files/quest-system/quest-system-core.md'
       }]
     },{
       name: 'Objectives',
@@ -112,9 +116,9 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         key: 'completionaction',
         mdFilePath: '../../../assets/files/quest-system/models/completion-action.md'
       }, {
-        name: 'Requirement',
+        name: 'IRequirement',
         key: 'requirement',
-        mdFilePath: '../../../assets/files/quest-system/models/requirement.md'
+        mdFilePath: '../../../assets/files/quest-system/models/irequirement.md'
       }, {
         name: 'Dummy Context',
         key: 'dummycontext',
