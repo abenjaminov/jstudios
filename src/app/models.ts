@@ -48,6 +48,14 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
         name: 'Quest System Core',
         key: 'questsystemcore',
         mdFilePath: '../../../assets/files/quest-system/quest-system-core.md'
+      }, {
+        name: 'QuestSystem Channel',
+        key: 'channel',
+        mdFilePath: '../../../assets/files/quest-system/channel.md'
+      }, {
+        name: 'Asset Lists',
+        key: 'lists',
+        mdFilePath: '../../../assets/files/quest-system/lists.md'
       }]
     },{
       name: 'Objectives',

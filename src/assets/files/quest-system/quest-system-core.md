@@ -26,3 +26,4 @@ If there is an unknown error, try using this assets' context menu 'Fix package'.
 | Name | Returns | Params | Description |
 |:--- |:---|:--- |:--- |
 | Refresh | None. | None. | Refreshes the availability of all quests in the system. |
+| Fix | None. | `string` - where the function was called from | Attempts in fixing any issues that break the quest system functionality internally. |
