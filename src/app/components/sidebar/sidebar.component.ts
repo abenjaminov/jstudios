@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
+import { NavigationService } from "src/app/services/navigation.service";
 import {SidebarComponentData, SidebarComponentService, SidebarGroup, SidebarItem} from "./sidebar.models";
-import {DocsService} from "../docs-view/services/docs.service";
 
 @Component({
   selector: 'sidebar',
@@ -13,7 +13,7 @@ export class SidebarComponent {
   selectedItem: SidebarItem;
   selectedGroup: SidebarGroup;
 
-  constructor(private service: SidebarComponentService) {
+  constructor(private service: SidebarComponentService, private navigationService: NavigationService) {
     this.service.onUpdated.subscribe(async () => {
       await this.init();
     })
@@ -57,5 +57,9 @@ export class SidebarComponent {
     this.selectedGroup.isOpen = true;
     const item = this.selectedGroup.items[0];
     this.service.onItemClicked(this.selectedGroup, item);
+  }
+
+  onHeaderClicked() {
+    this.navigationService.navigateToRoute('')
   }
 }

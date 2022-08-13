@@ -118,13 +118,14 @@ h2 {
     border-left: 3px solid $alertColor;
     color: $alertColor;
   }
+
 }
 
 h3 {
   font-size: 30px;
   display: flex;
   margin: 0.5em 0;
-
+  
   &::before {
     content: '';
     display: inline-block;
@@ -133,6 +134,11 @@ h3 {
     background-color: $mainColor;
     margin-right: 10px;
   }
+
+}
+
+.info {
+  color: $mainColor;
 }
 
 h4 {
@@ -171,10 +177,8 @@ code {
   }
 }
 
-//:not(pre)>code[class*=language-], pre[class*=language-] {
-//  background-color: $darkGray;
-//}
-//
-//.keyword {
-//  color: $mainColor!important;
-//}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

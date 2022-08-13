@@ -11,7 +11,7 @@ This interface will work as a `CompletionAction` for a <span class='jdl-questsys
 ## Examples
 
 In our example we would like to grant the player some amount on points when completing a quest<br>
-to do this we will create a `ScriptableObject` that will implement `ICompletionAction`.<br>
+to do this we will create a `ScriptableObject` that will implement <span class='jdl-questsystem-models-completionaction'>`ICompletionAction`</span>.<br>
 The `GrantPointsAction` class will implement logic to grant the player points once it is executed.
 ```cs
 [CreateAssetMenu(...)]
