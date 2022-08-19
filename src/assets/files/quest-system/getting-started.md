@@ -5,12 +5,18 @@ Welcome to the JStudios Quest system asset pack, using this package you can set 
 If you would like to download the Quest System asset pack by JStudios, you can do so in the link below 
 <a></a>
 
-After you have done so you, lets start by creating our first quest.
-We are going to create a quest that requires you to click on a button 3 times,
-in order to complete it you would need to click on another button 2 times.
+After you have done so, we can start by creating our first quest.
+We are going to create a quest that requires you to click on a button 2 times,
+in order to complete it you would need to click on another button 3 times.
 
-After you have reached the target (2 clicks), you would need to click on a 3rd button to complete it.
+After you have reached the target (3 clicks), you would need to click on a 3rd button to complete it.
 At the end we will print a message to the debugger console with real (fake) exp we grant the player.
+
+It is important to note, there are many types of quests that you can create while using this asset pack, this tutoiral below demonstrates only a few abilities of the asset pack.
+
+<div class="info">
+    The example is available on a  <a href='https://github.com/abenjaminov/QuestSystemAssetGettingStarted/tree/main'>GitHub repository</a>, you can check it out but be aware that if you clone it, it will not work without the asset pack.
+</div>
 
 ## Import package
 To import the package you can open the package manager inside the unity editor and import it from "my assets"
