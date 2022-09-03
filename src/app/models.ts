@@ -6,7 +6,8 @@ export enum DeviceType {
 
 export enum StudioItemType {
   link,
-  docs
+  docs,
+  download
 }
 
 export class StudioItemInfo {
@@ -142,6 +143,15 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
     type: StudioItemType.docs,
     isActive: false,
     context: []
-  }
+  },
+  {
+    name: "FOG (alpha)",
+    key: 'foggamealpharelease',
+    icon: 'fa-solid fa-gamepad',
+    isActive: true,
+    type: StudioItemType.link,
+    description: '2D rpg where you play a survivor in a world where there is a fog that turned everyone into monsters',
+    context: 'https://github.com/abenjaminov/FOG/releases/tag/Alpha'
+},
 ]
 
