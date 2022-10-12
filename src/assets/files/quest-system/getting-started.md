@@ -1,9 +1,17 @@
 # Quest System
-## Introduction
+## Installation
 Welcome to the JStudios Quest system asset pack, using this package you can set up quests and objectives for your project.
 
-If you would like to download the Quest System asset pack by JStudios, you can do so in the link below 
-<a></a>
+When installing the package you may encounter an error in the console
+```cs
+... error CS0234: The type or namespace name 'EditorCoroutines' does not exist in the namespace 'Unity' (are you missing an assembly reference?)...
+
+```
+
+To fix this go to the package manager and under the unity registry look for "Editor Coroutines" package and install it.
+If you are still having problems feel free to contact us at `jstudios.ab@gmail.com`
+
+## Getting started
 
 After you have done so, we can start by creating our first quest.
 We are going to create a quest that requires you to click on a button 2 times,
@@ -25,7 +33,7 @@ To import the package you can open the package manager inside the unity editor a
 Add 3 buttons to the scene, place them wherever you like.
 
 <div class="img-container">
-    <img src='assets/images/getting-started-setup-buttons.png' width="1103" height="406">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-setup-buttons.png' width="1103" height="406">
 </div>
 
 The first button will make our quest able to be activated.<br/>
@@ -36,7 +44,7 @@ The third button will make sure our quest is completed once the objective is don
 From the project window add a new quest, go to Create -> JStudios -> Quest System -> Quests -> Single Objective Quest<br/>
 In the inspector for the newly created quest, go to the objective info and change the raw target to 3.<br />
 <div class="img-container">
-    <img src='assets/images/getting-started-set-raw-target.png' width="336" height="358">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-set-raw-target.png' width="336" height="358">
 </div>
 
 ### Requirement
@@ -79,14 +87,14 @@ In order to make our quest apply this requirement on it, go to the project windo
 Go back to the project window and create a new `ButtonClickRequirement`, fill in the amount option.
 
 <div class="img-container">
-    <img src='assets/images/getting-started-create-requirement.png' width="340" height="191">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-create-requirement.png' width="340" height="191">
 </div>
 
 Now in our quest inspector, add a new "Require Before Active" item, click the + sign and then "Pick"<br />
 you should see your newly created `ButtonClickRequirement`, select it by double clicking it.<br />
 
 <div class="img-container">
-    <img src='assets/images/getting-started-add-requirement.png' width="365" height="400">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-add-requirement.png' width="365" height="400">
 </div>
 
 You should see its name in the item box.
@@ -145,7 +153,7 @@ In order to set a completion action for our quest, we need to make an instance o
 Go back to the project window and from the creation menu select your new GrantExpAction, fill in the amount of EXP you wish to grant when the quest completes.
 
 <div class="img-container">
-    <img src='assets/images/getting-started-grant-150-xp.png' width="336" height="197">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-grant-150-xp.png' width="336" height="197">
 </div>
 
 Go back to the inspector of the new quest you created and add a completion action, you can do this by adding 1 item to the "Completion Actions" list and then clicking on the "Pick" button. <br />
@@ -153,7 +161,7 @@ You should be able to see your newly created GrantExpAction asset, choose it by 
 Now notice that the name appears in the item box on the quest.
 
 <div class="img-container">
-    <img src='assets/images/getting-started-add-completion-action.png' width="395" height="475">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-add-completion-action.png' width="395" height="475">
 </div>
 
 Create a new script called `CompletionButton`.<br />
@@ -213,7 +221,7 @@ So now lets attach a Quest Context Behaviour component to the second button, add
 Double click to pick it
 
 <div class="img-container">
-    <img src='assets/images/getting-started-context-behaviour.png' width="685" height="675">
+    <img alt=" Image is unavailable in offline version" src='assets/images/getting-started-context-behaviour.png' width="685" height="675">
 </div>
 
 Now you should see the quests name is set in the objective item.
