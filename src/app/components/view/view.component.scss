@@ -16,6 +16,27 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
+    .view-header-links {
+      margin-left: 1rem;
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        text-decoration: none;
+        margin-left: 1rem;
+      }
+
+      i {
+        font-size: 1.5rem;
+        color: $mainColor;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
   }
 
   .view-content {
