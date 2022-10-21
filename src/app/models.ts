@@ -153,5 +153,14 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
     description: '2D rpg where you play a survivor in a world where there is a fog that turned everyone into monsters',
     context: 'https://github.com/abenjaminov/FOG/releases/tag/Alpha'
 },
+{
+  name: "5+3 signs that you are a good, no, great! developer.",
+  key: '8signsyouragooddeveloper',
+  icon: 'fa-brands fa-medium',
+  isActive: true,
+  type: StudioItemType.link,
+  description: 'My personal oppinion about how to become the best developer in the room.',
+  context: 'https://medium.com/@asaf.j.benjaminov/5-3-signs-that-you-are-a-good-no-great-developer-28559f260718'
+},
 ]
 
