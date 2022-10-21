@@ -18,6 +18,7 @@ export class StudioItemInfo {
   type: StudioItemType;
   context: any;
   isActive?: boolean;
+  fontSizeRem?: number;
 }
 
 export const studioItemsConfiguration: Array<StudioItemInfo> = [
@@ -158,6 +159,7 @@ export const studioItemsConfiguration: Array<StudioItemInfo> = [
   key: '8signsyouragooddeveloper',
   icon: 'fa-brands fa-medium',
   isActive: true,
+  fontSizeRem: 1.35,
   type: StudioItemType.link,
   description: 'My personal oppinion about how to become the best developer in the room.',
   context: 'https://medium.com/@asaf.j.benjaminov/5-3-signs-that-you-are-a-good-no-great-developer-28559f260718'

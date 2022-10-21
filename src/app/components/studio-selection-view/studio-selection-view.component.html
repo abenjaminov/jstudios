@@ -7,7 +7,7 @@
             <i class="{{studioItem.icon}}"></i>
           </span>
         </div>
-        <div class="title">
+        <div class="title" [ngStyle]="{'font-size' : (studioItem.fontSizeRem ? studioItem.fontSizeRem.toString() : '1.75') + 'rem'}">
           {{studioItem.name}}
         </div>
         <div class="description">
